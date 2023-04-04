@@ -1,7 +1,8 @@
 import * as react from "react";
+import Djual from "./component/djual";
 
 const App = () => {
-  return <h1>Hello world</h1>;
+  return <Djual />;
 };
 
 export default App;
