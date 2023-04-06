@@ -109,16 +109,16 @@ const Annouce = () => {
       const slideInterval = setInterval(nextSlide, 3000);
       return () => clearInterval(slideInterval);
     }
-  });
+  }, []);
 
   const gotoSlide = (index) => {
     setIndex(index);
   };
   return (
-    <div className=" h-96">
+    <div className="">
       <div className=" flex gap-3 p-3 relative">
         <ImagesItem data={images} currentIndex={currentIndex} />
-        <div
+        {/* <div
           onClick={prevSlide}
           className=" group-hover:hidden absolute top-20 left-5 cursor-pointer"
         >
@@ -129,7 +129,7 @@ const Annouce = () => {
           className=" group-hover:hidden absolute top-20 right-5 cursor-pointer"
         >
           <ChefronRight />
-        </div>
+        </div> */}
       </div>
       <div className=" flex justify-center">
         {images.map(
@@ -137,9 +137,6 @@ const Annouce = () => {
           //   <Dot key={index} gotoSlide={gotoSlide} />
         )}
       </div>
-      <div className=" h-96"></div>
-      <div className=" h-96"></div>
-      <div className=" h-96"></div>
     </div>
   );
 };
