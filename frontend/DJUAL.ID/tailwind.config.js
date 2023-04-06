@@ -5,6 +5,12 @@ export default {
     extend: {
       fontFamily: {
         quick: ["Quicksand", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
+        alata: ["Alata", "sans-serif"],
+      },
+      backgroundImage: {
+        business: "url('./images/business,-entrepreneurship-and-growth.svg')",
+        heikei: "url('./images/wave-haikei (5).svg')",
       },
     },
   },
