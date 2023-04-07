@@ -66,7 +66,11 @@ const ImagesItem = ({ data, currentIndex }) => {
           backgroundImage: `url(${data[currentIndex].url})`,
         }}
       ></div> */}
-      <img src={data[currentIndex].url} className=" rounded-xl" alt="" />
+      <img
+        src={data[currentIndex].url}
+        className=" rounded-xl md:scale-75"
+        alt=""
+      />
     </div>
   );
 };
@@ -109,14 +113,14 @@ const Annouce = () => {
       const slideInterval = setInterval(nextSlide, 3000);
       return () => clearInterval(slideInterval);
     }
-  }, []);
+  });
 
   const gotoSlide = (index) => {
     setIndex(index);
   };
   return (
     <div className="">
-      <div className=" flex gap-3 p-3 relative">
+      <div className=" flex gap-3 p-3 relative z-10">
         <ImagesItem data={images} currentIndex={currentIndex} />
         {/* <div
           onClick={prevSlide}

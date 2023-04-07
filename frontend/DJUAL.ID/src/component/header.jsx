@@ -6,7 +6,7 @@ const Header = () => {
     {
       icon: (
         <svg
-          className=" w-7 h-7"
+          className=" w-7 h-7 md:hidden"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className=" flex gap-3 justify-end max-sm:hidden">
+      <div className=" flex gap-3 max-sm:hidden justify-between">
         <div className=" flex flex-col font-alata justify-center text-2xl">
           <div className=" flex gap-3">
             <a className=" bg-slate-600/60 p-3 rounded-xl" href="#">
@@ -86,7 +86,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col justify-center">
+      <div className=" flex flex-col justify-center md:hidden">
         <div className=" cursor-pointer" onClick={handleChange}>
           {icon[currentIndex].icon}
         </div>

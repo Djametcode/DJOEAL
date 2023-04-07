@@ -1,3 +1,5 @@
+
+
 const Main = () => {
   return (
     <div className=" font-jost text-white/70">
@@ -5,7 +7,7 @@ const Main = () => {
         <h2 className=" text-2xl pl-4">We Sell Everything</h2>
       </div>
       <div className=" flex gap-4 p-4 justify-start">
-        <div className=" bg-slate-500 p-2 rounded-xl w-40 h-40 max-w-sm:w-36 max-sm:h-32">
+        <div className=" p-2 rounded-xl w-40 h-40 max-w-sm:w-36 max-sm:h-32">
           <div className=" flex justify-center">
             <svg
               className=" w-28 h-28 max-sm:w-10 max-sm:h-10"

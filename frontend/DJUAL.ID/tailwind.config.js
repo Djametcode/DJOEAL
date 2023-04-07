@@ -11,6 +11,7 @@ export default {
       backgroundImage: {
         business: "url('./images/business,-entrepreneurship-and-growth.svg')",
         heikei: "url('./images/wave-haikei (5).svg')",
+        video: "url('./src/images/degraded-119282.mp4')",
       },
     },
   },
