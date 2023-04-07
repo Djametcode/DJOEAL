@@ -40,7 +40,7 @@ const Menu = () => {
           autoPlay
           muted
           loop
-          src="./images/degraded-119282.mp4"
+          src="./DJUAL.ID/src/images/degraded-119282.mp4"
         ></video>
         {/* <div className=" font-alata text-white/70 p-3 text-base">
           <p>Looking For Something?</p>
