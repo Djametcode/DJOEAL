@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Menu = () => {
   const url = [
     {
-      video: "./src/images/degraded-119282.mp4",
+      video: "./images/degraded-119282.mp4",
     },
   ];
   const images = [
