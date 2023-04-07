@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Menu = () => {
   const url = [
     {
-      video: "./video/degraded-119282.mp4",
+      video: "./degraded-119282.mp4",
     },
   ];
   const images = [
@@ -40,7 +40,7 @@ const Menu = () => {
           autoPlay
           muted
           loop
-          src="./video/degraded-119282.mp4"
+          src="./degraded-119282.mp4"
         ></video>
         {/* <div className=" font-alata text-white/70 p-3 text-base">
           <p>Looking For Something?</p>
