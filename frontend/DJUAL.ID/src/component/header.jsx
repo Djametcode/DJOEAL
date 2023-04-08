@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "./slider";
 
-const Header = () => {
+const Header = ({ setToggel }) => {
   const icon = [
     {
       icon: (
@@ -41,11 +41,11 @@ const Header = () => {
   ];
 
   const [currentIndex, setIndex] = useState(0);
-  const [slider, setSlider] = useState(false);
   const handleChange = () => {
     const isStart = currentIndex === 0;
     const next = isStart ? icon.length - 1 : 0;
     setIndex(next);
+    setToggel(true);
   };
   return (
     <div className=" bg-slate-700 text-slate-100/80 p-7 max-sm:h-14 h-32 flex justify-between">
