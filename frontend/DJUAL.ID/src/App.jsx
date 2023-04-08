@@ -7,7 +7,7 @@ import Menu from "./component/menu";
 import SearchData from "./component/data";
 import Explained from "./component/explained";
 import Slider from "./component/slider";
-import HashLoader from "react-spinners/HashLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const DjualApp = () => {
   const [isToggle, setToggel] = react.useState(false);
@@ -20,31 +20,32 @@ const DjualApp = () => {
     }, 5000);
   }, []);
   return (
-    <div className=" bg-slate-800 relative">
-      <div className=" fixed w-full z-30 transition-all">
-        {isToggle && <Slider setToggel={setToggel} />}
-      </div>
-      <div className=" sticky top-0 z-20">
-        <Header setToggel={setToggel} />
-      </div>
-      <div className=" z-0">
-        {loading ? (
-          <div className=" flex justify-center p-5">
-            <HashLoader loading={loading} color="grey" />
+    <div className=" bg-slate-600">
+      {loading ? (
+        <div className=" h-screen flex justify-center">
+          <div className=" flex flex-col justify-center gap-2">
+            <PacmanLoader loading={loading} color="grey" />
           </div>
-        ) : (
-          <Annouce />
-        )}
-      </div>
-      {/* <div>
-        <Menu />
-      </div> */}
-      <div>
-        <SearchData />
-      </div>
-      <div>
-        <Explained />
-      </div>
+        </div>
+      ) : (
+        <div className=" bg-heikei relative">
+          <div className=" fixed w-full z-30 transition-all">
+            {isToggle && <Slider setToggel={setToggel} />}
+          </div>
+          <div className=" sticky top-0 z-20">
+            <Header setToggel={setToggel} />
+          </div>
+          <div className=" z-0">
+            <Annouce />
+          </div>
+          <div>
+            <SearchData />
+          </div>
+          <div>
+            <Explained />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
