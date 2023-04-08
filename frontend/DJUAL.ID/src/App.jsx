@@ -4,6 +4,8 @@ import Header from "./component/header";
 import Annouce from "./component/annocement";
 import Main from "./component/main";
 import Menu from "./component/menu";
+import SearchData from "./component/data";
+import Explained from "./component/explained";
 
 const DjualApp = () => {
   return (
@@ -14,8 +16,14 @@ const DjualApp = () => {
       <div className=" z-0">
         <Annouce />
       </div>
-      <div>
+      {/* <div>
         <Menu />
+      </div> */}
+      <div>
+        <SearchData />
+      </div>
+      <div>
+        <Explained />
       </div>
     </div>
   );
