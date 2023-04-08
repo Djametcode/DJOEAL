@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "./slider";
+import data from "../../data";
 
 const Header = ({ setToggel }) => {
   const icon = [
@@ -88,9 +89,18 @@ const Header = ({ setToggel }) => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col justify-center md:hidden">
-        <div className=" cursor-pointer" onClick={handleChange}>
-          {icon[currentIndex].icon}
+      <div className=" flex justify-center md:hidden gap-2">
+        <div className=" flex flex-col justify-center">
+          <input
+            className=" p-2 bg-slate-600 rounded-lg placeholder:text-white/60 placeholder:font-alata focus:outline-none focus:text-white/60"
+            type="text"
+            placeholder="ketikan barang"
+          />
+        </div>
+        <div className=" flex flex-col justify-center">
+          <div className=" cursor-pointer" onClick={handleChange}>
+            {icon[currentIndex].icon}
+          </div>
         </div>
       </div>
     </div>
