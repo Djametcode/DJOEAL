@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import data from "../../data";
 
 const SearchData = () => {
@@ -30,25 +30,29 @@ const SearchData = () => {
       </div>
       <div className=" bg-cyan-700 p-3 flex flex-col gap-2">
         <h4 className=" text-white/60">Result : </h4>
-        <div className=" text-white/70 bg-heikei p-5 rounded-xl flex flex-col gap-2">
-          {phone.map((item) => (
-            <>
-              <div className=" flex font-alata justify-between">
-                <p>{item.phone}</p>
-                <p>
-                  Harga :{" "}
-                  {item.price.toLocaleString("ID", {
-                    style: "currency",
-                    currency: "IDR",
-                  })}
-                </p>
-              </div>
-              <div>
-                <hr className=" text-slate-600 h-1" />
-              </div>
-            </>
-          ))}
-        </div>
+        <Suspense
+          fallback={<p className=" font-alata text-white">Loading ....</p>}
+        >
+          <div className=" text-white/70 bg-heikei p-5 rounded-xl flex flex-col gap-2">
+            {phone.map((item) => (
+              <>
+                <div className=" flex font-alata justify-between">
+                  <p>{item.phone}</p>
+                  <p>
+                    Harga :{" "}
+                    {item.price.toLocaleString("ID", {
+                      style: "currency",
+                      currency: "IDR",
+                    })}
+                  </p>
+                </div>
+                <div>
+                  <hr className=" text-slate-600 h-1" />
+                </div>
+              </>
+            ))}
+          </div>
+        </Suspense>
       </div>
     </>
   );
