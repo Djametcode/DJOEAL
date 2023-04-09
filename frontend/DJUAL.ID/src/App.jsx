@@ -12,6 +12,7 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 const DjualApp = () => {
   const [isToggle, setToggel] = react.useState(false);
   const [loading, setLoading] = react.useState(false);
+  const [translate, setTranslate] = react.useState(-500);
 
   react.useEffect(() => {
     setLoading(true);
@@ -19,6 +20,15 @@ const DjualApp = () => {
       setLoading(false);
     }, 5000);
   }, []);
+  const scrollHeight = () => {
+    const position = window.scrollY;
+    if (position >= 20) {
+      setTranslate(0);
+    } else {
+      setTranslate(-500);
+    }
+  };
+  window.addEventListener("scroll", scrollHeight);
   return (
     <div className=" bg-slate-600 w-screen">
       {loading ? (
@@ -41,7 +51,10 @@ const DjualApp = () => {
           <div>
             <SearchData />
           </div>
-          <div>
+          <div
+            className=" transition-all delay-300"
+            style={{ transform: `translate(${translate}px, 0px)` }}
+          >
             <Explained />
           </div>
         </div>
