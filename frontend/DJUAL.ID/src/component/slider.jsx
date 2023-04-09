@@ -46,32 +46,40 @@ const Slider = ({ setToggel }) => {
     },
   ];
   return (
-    <div className=" bg-slate-900 flex flex-col pb-96 text-white p-3 pt-5 h-full gap-5">
+    <div className=" bg-slate-900 flex flex-col h-screen text-white p-3 pt-5 gap-5 w-72 relative rounded-tr-3xl rounded-br-3xl">
       <div className=" flex flex-col font-alata gap-6">
         <div>
-          <Link className=" bg-slate-600 p-2 rounded-lg" to="/">
+          <Link
+            className=" underline underline-offset-4 p-2 hover:no-underline hover:bg-slate-600 hover: rounded-lg"
+            to="/"
+          >
             Beranda
           </Link>
         </div>
         <div>
-          <Link className=" bg-slate-600 p-2 rounded-lg" to="/">
+          <Link
+            className=" underline underline-offset-4 p-2 hover:no-underline hover:bg-slate-600 hover: rounded-lg"
+            to="/"
+          >
             Contact Us
           </Link>
         </div>
         <div>
-          <Link className=" bg-slate-600 p-2 rounded-lg" to="/">
+          <Link
+            className=" p-2 underline underline-offset-4 hover:no-underline hover:bg-slate-600 hover: rounded-lg"
+            to="/"
+          >
             About Us
           </Link>
         </div>
-        <div className=" absolute bottom-16">
+        <div className=" absolute bottom-2 text-sm">
           <p>Copyright &copy; 2023</p>
           <p> Djamet Coder</p>
         </div>
       </div>
-      <div onClick={next} className=" absolute right-3 top-3 cursor-pointer">
+      <div onClick={next} className=" absolute right-2 top-2 cursor-pointer">
         {icon[indexes].close}
       </div>
-      <div className=" bg-slate-900 h-96"></div>
     </div>
   );
 };

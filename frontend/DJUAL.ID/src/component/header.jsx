@@ -91,13 +91,6 @@ const Header = ({ setToggel }) => {
       </div>
       <div className=" flex justify-center md:hidden gap-2">
         <div className=" flex flex-col justify-center">
-          <input
-            className=" p-2 bg-slate-600 rounded-lg placeholder:text-white/60 placeholder:font-alata focus:outline-none focus:text-white/60"
-            type="text"
-            placeholder="ketikan barang"
-          />
-        </div>
-        <div className=" flex flex-col justify-center">
           <div className=" cursor-pointer" onClick={handleChange}>
             {icon[currentIndex].icon}
           </div>

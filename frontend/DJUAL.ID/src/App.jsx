@@ -29,7 +29,7 @@ const DjualApp = () => {
         </div>
       ) : (
         <div className=" bg-heikei relative">
-          <div className=" fixed w-full z-30 transition-all">
+          <div className=" bg-black/40 fixed w-screen z-30 transition-all">
             {isToggle && <Slider setToggel={setToggel} />}
           </div>
           <div className=" sticky top-0 z-20">
