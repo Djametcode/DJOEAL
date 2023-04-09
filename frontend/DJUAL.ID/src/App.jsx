@@ -20,7 +20,7 @@ const DjualApp = () => {
     }, 5000);
   }, []);
   return (
-    <div className=" bg-slate-600">
+    <div className=" bg-slate-600 w-screen">
       {loading ? (
         <div className=" h-screen flex justify-center">
           <div className=" flex flex-col justify-center gap-2">

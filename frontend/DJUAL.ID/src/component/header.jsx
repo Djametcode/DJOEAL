@@ -49,7 +49,7 @@ const Header = ({ setToggel }) => {
     setToggel(true);
   };
   return (
-    <div className=" bg-slate-700 text-slate-100/80 p-7 max-sm:h-14 h-32 flex justify-between">
+    <div className=" bg-slate-700 text-slate-100/80 p-7 max-sm:h-14 h-32 flex justify-between w-screen">
       <div className=" flex justify-between">
         <div className=" flex">
           <div className=" flex flex-col justify-center">
